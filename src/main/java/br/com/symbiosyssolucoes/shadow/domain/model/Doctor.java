@@ -10,6 +10,18 @@ public class Doctor {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    public UUID getExternalId() {
+        return externalId;
+    }
+
+    public Especialization getEspecialization() {
+        return especialization;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
     private UUID externalId;
 
     private String name;
@@ -39,5 +51,21 @@ public class Doctor {
         this.email = email;
         this.especialization = Especialization.GENERAL;
         this.active = true;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public String getDocument() {
+        return document;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

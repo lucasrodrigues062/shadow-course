@@ -10,7 +10,7 @@ import javax.validation.constraints.Past;
 import java.time.LocalDate;
 
 
-public class CreateDoctorDto {
+public class CreateDoctorRequest {
 
     @NotBlank
     @JsonProperty("nome")
@@ -28,6 +28,6 @@ public class CreateDoctorDto {
     @Email
     public String email;
 
-    public CreateDoctorDto() {
+    public CreateDoctorRequest() {
     }
 }
